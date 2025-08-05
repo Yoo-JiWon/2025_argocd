@@ -4,7 +4,7 @@ metadata:
   name: fortio-a-cb
   namespace: test
 spec:
-  host: fortio-a.default.svc.cluster.local
+  host: fortio-a.test.svc.cluster.local
   trafficPolicy:
     connectionPool:
       http:
