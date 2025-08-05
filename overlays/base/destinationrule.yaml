@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: fortio-a-cb
-  namespace: default
+  namespace: test
 spec:
   host: fortio-a.default.svc.cluster.local
   trafficPolicy:

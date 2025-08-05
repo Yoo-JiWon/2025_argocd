@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fortio-a
+  labels:
+    app: fortio-a
+spec:
+  selector:
+    app: fortio-a
+  ports:
+    - port: 8080
+      targetPort: 8080
+
