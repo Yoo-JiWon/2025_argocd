@@ -1,10 +1,10 @@
 apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
-  name: fortio-a-cb
+  name: frotend-cb
   namespace: test
 spec:
-  host: fortio-a.test.svc.cluster.local
+  host: frontend.test.svc.cluster.local
   trafficPolicy:
     connectionPool:
       http:
