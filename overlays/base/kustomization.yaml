@@ -2,4 +2,4 @@ resources:
   - deployment.yaml
   - destinationrule.yaml
   - service.yaml
-  - kubernetes-manifest.yaml
+  - kubernetes-manifests.yaml
