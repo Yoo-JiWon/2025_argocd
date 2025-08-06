@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
-  name: frotend-cb
+  name: frontend-cb
   namespace: test
 spec:
   host: frontend.test.svc.cluster.local
