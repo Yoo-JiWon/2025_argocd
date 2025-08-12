@@ -4,3 +4,4 @@ resources:
   - service.yaml
   - kubernetes-manifests.yaml
   - virtualservice.yaml
+  - cartservice-gateway.yaml
