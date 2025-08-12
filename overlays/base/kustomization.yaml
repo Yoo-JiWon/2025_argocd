@@ -3,3 +3,4 @@ resources:
   - destinationrule.yaml
   - service.yaml
   - kubernetes-manifests.yaml
+  - virtualservice.yaml
