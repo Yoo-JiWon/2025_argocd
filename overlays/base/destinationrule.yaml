@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: cartservice-dr
+  namespace: test`
+spec:
+  host: cartservice.boutique.svc.cluster.local
+  trafficPolicy:
+    connectionPool:
+      tcp:
+        maxConnections: 50
+      http:
+        http1MaxPendingRequests: 100
+        maxRequestsPerConnection: 1
+    outlierDetection:
+      consecutive5xx: 5
+      interval: 5s
+      baseEjectionTime: 30s
+      maxEjectionPercent: 50
+
