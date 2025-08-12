@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1
 kind: Gateway
 metadata:
-  name: cartservice-gw
+  name: frontend-gw
   namespace: test
 spec:
   selector:
@@ -17,17 +17,17 @@ spec:
 apiVersion: networking.istio.io/v1
 kind: VirtualService
 metadata:
-  name: cartservice-vs
+  name: frontend-vs
   namespace: test
 spec:
   hosts:
   - "*"
   gateways:
-  - cartservice-gw
+  - frontend-gw
   http:
   - route:
     - destination:
-        host: cartservice.boutique.svc.cluster.local
+        host: frontend.boutique.svc.cluster.local
         port:
-          number: 7070
+          number: 80
 
