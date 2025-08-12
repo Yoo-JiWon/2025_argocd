@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: cartservice-dr
-  namespace: test`
+  namespace: test
 spec:
   host: cartservice.boutique.svc.cluster.local
   trafficPolicy:
