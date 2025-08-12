@@ -1,10 +1,10 @@
 apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
-  name: cartservice-dr
+  name: frontend-dr
   namespace: test
 spec:
-  host: cartservice.boutique.svc.cluster.local
+  host: frontend.boutique.svc.cluster.local
   trafficPolicy:
     connectionPool:
       tcp:
