@@ -1,0 +1,3 @@
+resources:
+  - ingress-gateway-patch.yaml
+
