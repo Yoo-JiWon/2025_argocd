@@ -1,20 +1,3 @@
-# frontend-gw.yaml
-apiVersion: networking.istio.io/v1beta1
-kind: Gateway
-metadata:
-  name: frontend-gw
-  namespace: test
-spec:
-  selector:
-    istio: ingressgateway          # istio-ingressgateway에 붙임
-  servers:
-  - port:
-      number: 80
-      name: http
-      protocol: HTTP
-    hosts:
-    - "*"                           # 어떤 Host 헤더든 허용
----
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
@@ -22,7 +5,7 @@ metadata:
   namespace: test
 spec:
   hosts:
-  - "*"                             # 위 Gateway와 매칭
+  - "*"                           # Gateway와 매칭
   gateways:
   - frontend-gw
   http:
