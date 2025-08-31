@@ -25,12 +25,13 @@ spec:
             cpu: "200m"
             memory: "256Mi"
       affinity:
-        nodeAffinity:
+        podAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: kubernetes.io/hostname
+          - labelSelectorTerms:
+             matchExpressions:
+              - key: app
                 operator: In
                 values:
-                - worker2
+                - frontend
+            topologyKey: "kubernetes.io/hostname"
 
