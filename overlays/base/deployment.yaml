@@ -24,14 +24,16 @@ spec:
           requests:
             cpu: "50m"
             memory: "128Mi"
+spec:   
+  template:
+    spec:
       affinity:
-        podAffinity:
+        nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelectorTerms:
+          - nodeSelectorTerms:
              matchExpressions:
-              - key: app
+              - key: kubernetes.io/hostname
                 operator: In
                 values:
-                - frontend
-            topologyKey: "kubernetes.io/hostname"
+                - worker1
 
