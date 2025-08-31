@@ -5,11 +5,11 @@ metadata:
   namespace: test
 spec:
   hosts:
-  - frontend.boutique.svc.cluster.local
+  - frontend.test.svc.cluster.local
   http:
   - route:
     - destination:
-        host: frontend.boutique.svc.cluster.local
+        host: frontend.test.svc.cluster.local
     retries:
       attempts: 5
       perTryTimeout: 300ms
