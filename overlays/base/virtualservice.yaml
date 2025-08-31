@@ -5,13 +5,18 @@ metadata:
   namespace: test
 spec:
   hosts:
-  - frontend.test.svc.cluster.local
+  - "*"                 
+  gateways:
+  - frontend-gw             
   http:
-  - route:
-    - destination:
-        host: frontend.test.svc.cluster.local
-    retries:
+  - retries:
       attempts: 5
       perTryTimeout: 300ms
-      retryOn: "5xx,connect-failure,refused-stream"
+      retryOn: "5xx,connect-failure,refused-stream,reset"
     timeout: 2s
+    route:
+    - destination:
+        host: frontend.test.svc.cluster.local
+        port:
+          number: 80
+
