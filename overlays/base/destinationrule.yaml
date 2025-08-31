@@ -4,7 +4,7 @@ metadata:
   name: frontend-dr
   namespace: test
 spec:
-  host: frontend.test.svc.cluster.local
+  host: frontend
   trafficPolicy:
     connectionPool:
       tcp:
