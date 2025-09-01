@@ -7,7 +7,7 @@ spec:
   hosts:
   - "*"                           # Gateway와 매칭
   gateways:
-  - frontend-gw
+  - mesh
   http:
   - retries:
       attempts: 5
