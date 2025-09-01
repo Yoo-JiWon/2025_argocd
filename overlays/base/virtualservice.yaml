@@ -5,7 +5,7 @@ metadata:
   namespace: test
 spec:
   hosts:
-  - "frontend.test.svc.cluster.local"`                           # Gateway와 매칭
+  - frontend.test.svc.cluster.local                           # Gateway와 매칭
   gateways:
   - mesh
   http:
