@@ -1,7 +1,4 @@
 resources:
   - deployment.yaml
-  - destinationrule.yaml
   - service.yaml
   - kubernetes-manifests.yaml
-  - virtualservice.yaml
-  - cartservice-gateway.yaml
